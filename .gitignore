@@ -21,3 +21,33 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
+
+service-account.json
+
+# Firebase CLI/project config (often contains project IDs)
+/.firebaserc
+/firebase.json
+
+# Firestore indexes & rules (if you don’t want to publish them)
+/firestore-debug.log
+/firestore.indexes.json
+/firestore.rules
+
+# Anything in scripts/ that’s only for local imports
+/scripts/
+/import-pedals.js
+
+# Any CSV exports
+*.csv
+
+# Build or image folders you don’t want in source
+/public/images/
+
+# Local VS Code settings
+.vscode/
+
+# Env files
+.env.development
+.env.production
