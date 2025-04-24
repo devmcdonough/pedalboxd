@@ -1,0 +1,47 @@
+.carousel {
+    margin: 2rem 0;
+  
+    &_title {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  
+    &_container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+  
+    .carousel_item_wrapper {
+      flex: 0 0 auto;
+      margin-right: 8px;
+      cursor: pointer;
+      text-align: left; // ensures the text is left-aligned
+    }
+  
+    .carousel_item {
+      width: 240px;    // fixed width
+      height: 240px;   // fixed height
+      background-color: #f0f0f0;
+      padding: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;   // centers image vertically
+      justify-content: center; // centers image horizontally (if desired)
+    }
+  
+    .carousel_item_image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; // ensures the image is contained within the box
+      display: block;
+    }
+  
+    .carousel_item_text {
+      margin-top: 4px;
+      font-size: 14px;
+      /* text is left-aligned due to the parent wrapper */
+    }
+  }
+  

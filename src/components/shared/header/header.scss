@@ -1,0 +1,123 @@
+.header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }      
+
+  &_logo {
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    &-img {
+      width: 24px;        // Adjust based on your design
+      height: auto;
+      margin-right: 0.5rem; // Adds space between the logo and the text
+    }
+  }
+  
+  &_nav {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        margin-right: 1rem;
+      }
+    }
+  }
+  
+  &_user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    span, button {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    
+    button {
+      // margin-left: 1.5rem;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      cursor: pointer;
+      color: #333;
+    }
+  }
+  
+  // Hide mobile menu by default
+  &_mobile {
+    display: none;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header_nav,
+  .header_user {
+    display: none;
+  }
+  
+  .header_mobile {
+    display: block;
+    position: relative;
+  
+    .header_mobile_icon {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  
+    .header_mobile_nav {
+      position: absolute;
+      top: 3rem; // Adjust as needed
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      width: 200px;
+      z-index: 1000;
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+          padding: 0.5rem 1rem;
+          border-bottom: 1px solid #eee;
+          
+          a,
+          button {
+            text-decoration: none;
+            color: inherit;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #4a4a4a;
+}
+
+.detail-page {
+    max-width: 1200px;
+    margin: 1rem 2rem 2rem 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .07);
+}
+
+/* Main section */
+.detail-main {
+    display: flex;
+    align-items: flex-start; /* Ensures items align at the top */
+    gap: 20px; /* Space between image and info */
+    flex-wrap: nowrap; /* Prevent wrapping that might cause overlap */
+  }
+  
+  @media (max-width: 768px) {
+    .detail-main {
+      flex-direction: column;   // stack items vertically
+      align-items: center;        // center items if desired
+    }
+    .detail-image {
+      width: 100%;
+      max-width: 400px;          // adjust as needed
+    }
+    .detail-info {
+      width: 100%;
+    }
+  }
+
+  .detail-image {
+    flex: 0 0 400px; /* Fixes the width to 400px */
+    max-width: 400px;
+    /* Remove height: auto here if it's causing issues */
+  }
+  
+  .detail-image img {
+    width: 100%;      /* Make the image fill the container */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the entire image is visible */
+  }
+  
+  .detail-info {
+    flex: 1; /* Takes the remaining space */
+  }
+  
+
+.product-model {
+    font-size: 2em;
+    margin-bottom: 0.2rem;
+}
+
+.product-brand,
+.product-type,
+.product-rating {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-description {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* Reviews Section */
+.product-reviews {
+    margin-top: 32px;
+}
+
+.product-reviews h4 {
+    margin-bottom: 16px;
+}
+
+.review {
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.review h3 {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #4a4a4a;
+}
+
+.review p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #4a4a4a;
+}
+
+.favorites-btn {
+  background: none;
+  border: none;
+  
+  padding: 0;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #4a4a4a;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.favorites-btn .heart-icon.favorited {
+  color: #e31b23;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 0.95em;
+}
+
+.specs-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.specs-modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.specs-modal-close {
+  position: absolute;
+  top: 0.5rem; right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.specs-modal-text {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+

@@ -1,0 +1,35 @@
+.search-item {
+    flex: 0 0 calc(33.333% - 1rem);
+    margin-bottom: 1rem;
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    &__info {
+        padding: 0.5rem;
+    }
+
+    &__model {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    &__brand,
+    &__type,
+    &__rating {
+        font-size: 0.9rem;
+        margin: 0.25rem 0;
+    }
+}
+
+.rating-display {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; // Optional: adds a little space between the rating and the count
+  }
+  

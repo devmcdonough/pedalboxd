@@ -1,0 +1,130 @@
+// Import the Inter font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Variables for styling
+$primary-color: #006aff; // Accent blue similar to Zillow
+$text-color: #333;
+$background-color: #fff;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Global HomePage styling
+.homepage {
+  padding: 0 1rem 1rem 1rem;
+  font-family: 'Inter', sans-serif;
+  color: $text-color;
+}
+
+// -----------------------
+// Hero Section Styles
+// -----------------------
+.homepage-hero {
+  width: 100vw;
+  margin-left: -1rem;  // Offset parent's left padding
+  margin-right: -1rem; // Offset parent's right padding
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  // Dark overlay for better contrast on background image
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  // Hero content container; ensures content appears above overlay
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  // Hero title styling
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+}
+
+// -----------------------
+// Carousel Section Styles
+// -----------------------
+.carousel {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-family: 'Inter', sans-serif;
+
+  // Title for carousel sections (e.g., "Brands" or "Types")
+  &__title {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  // Container for the carousel track
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  // Each carousel item card
+  .carousel-item {
+    flex: 0 0 auto;
+    margin: 0 0.5rem;
+
+    .card {
+      background-color: $background-color;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px $shadow-color;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .card-body {
+        padding: 15px;
+        h3 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          color: $text-color;
+        }
+        p {
+          font-size: 1rem;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------
+// Responsive Adjustments
+// -----------------------
+@media (max-width: 768px) {
+  .homepage-hero {
+    height: 300px;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .carousel__title {
+    font-size: 1.75rem;
+  }
+}
