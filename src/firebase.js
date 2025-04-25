@@ -3,7 +3,7 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyD2GcWQbXs5mV_SJtN1Zx_6ATx0BsSJEtw',
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: "pedalboxd.firebaseapp.com",
     projectId: 'pedalboxd'
 };
